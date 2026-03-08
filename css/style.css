@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    @apply bg-gray-100 dark:bg-gray-900 transition-colors duration-300;
+}
+
+.content-wrapper {
+    height: calc(100vh - 64px);
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    @apply bg-zinc-900 dark:bg-zinc-950;
+}
+
+.content-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-container {
+    position: fixed;
+    top: 64px;
+    right: 0;
+    width: 12px;
+    height: calc(100vh - 64px);
+    z-index: 40;
+}
+
+.scrollbar-track {
+    position: absolute;
+    top: 0;
+    right: 2px;
+    width: 8px;
+    height: 100%;
+    @apply bg-zinc-700 dark:bg-zinc-800 rounded;
+}
+
+.custom-scrollbar {
+    position: absolute;
+    top: 0;
+    right: 2px;
+    width: 8px;
+    height: 100px;
+    @apply bg-zinc-500 dark:bg-zinc-600 rounded cursor-pointer transition-colors duration-200;
+}
+
+.custom-scrollbar:hover {
+    @apply bg-zinc-400 dark:bg-zinc-500;
+}
+
+h3 {
+    @apply text-green-400 dark:text-green-300 mb-6 font-bold text-3xl;
+}
+
+nav {
+    @apply bg-zinc-800 dark:bg-zinc-900 shadow-md sticky top-0 z-50 p-4 flex justify-between items-center w-full transition-colors duration-300;
+}
+
+/* Light Mode Stilleri */
+body.light {
+    @apply bg-gray-50 text-gray-900;
+}
+
+body.light nav {
+    @apply bg-white shadow-sm;
+}
+
+body.light a {
+    @apply text-gray-700;
+}
+
+body.light a:hover {
+    @apply text-green-600;
+}
+
+body.light .text-zinc-300 {
+    @apply text-gray-600;
+}
+
+body.light .bg-zinc-900 {
+    @apply bg-gray-200;
+}
+
+body.light .bg-zinc-800 {
+    @apply bg-gray-200 border border-gray-300;
+}
+
+body.light .border-zinc-700 {
+    @apply border-gray-300;
+}
+
+body.light h3 {
+    @apply text-green-600;
+}
+
+body.light .custom-scrollbar {
+    @apply bg-gray-300;
+}
+
+body.light .custom-scrollbar:hover {
+    @apply bg-gray-400;
+}
+
+body.light .scrollbar-track {
+    @apply bg-gray-200;
+}
+
+body.light #hero img {
+    @apply border-gray-400;
+}
+
+body.light footer {
+    @apply text-gray-500;
+}
+
+body.light #listen-button {
+    @apply text-blue-500;
+}
+
+body.light #listen-button:hover {
+    @apply text-blue-700;
+}
+
+body.light input,
+body.light textarea {
+    @apply bg-gray-100 border-gray-300 text-gray-900 focus:ring-green-500;
+}
+
+body.light button {
+    @apply bg-green-500 hover:bg-green-600;
+}
+
+body.light .bg-green-400 {
+    @apply bg-green-500;
+}
+
+body.light #about,
+body.light #media,
+body.light #timeline {
+    background-color: #f3f4f6;
+}
+
+body.light #skills-timeline,
+body.light #projects {
+    background-color: #e5e7eb;
+}
+

@@ -1,0 +1,12 @@
+# Hassas dosyalar
+.env
+secret.txt
+*.log
+
+# IDE ayarları
+.vscode/
+.idea/
+
+# Sistem dosyaları
+Thumbs.db
+.DS_Store
